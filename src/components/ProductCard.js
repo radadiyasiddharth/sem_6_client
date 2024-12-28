@@ -10,7 +10,7 @@ const ProductCard = ({ productimg, productimg_01, grid }) => {
   const location = useLocation()
   return (
     <div className={`${location.pathname === "/store" ? `col-${grid}` : "col-3"}`}>
-      <Link className={`position-relative product-card ${grid === 12 ? ` my-2 align-items-center d-flex gap-15` : ""}`}>
+      <Link to={":id"} className={`position-relative product-card ${grid === 12 ? ` my-2 align-items-center d-flex gap-15` : ""}`}>
         <div className="wishlist-icon position-absolute">
           <Link><img src={wish_icon} alt="" /></Link>
         </div>
