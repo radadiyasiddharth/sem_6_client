@@ -1,5 +1,5 @@
 import React from 'react'
-import main_banner from "../assets/images/main-banner-1.jpg"
+import main_banner from "../assets/images/main-banner.jpg"
 import catbanner1 from "../assets/images/catbanner-01.jpg"
 import catbanner2 from "../assets/images/catbanner-02.jpg"
 import catbanner3 from "../assets/images/catbanner-03.jpg"
