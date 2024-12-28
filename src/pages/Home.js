@@ -99,7 +99,7 @@ const Home = () => {
                   <img src={service1} alt="services" />
                   <div>
                     <h6>Free Shipping</h6>
-                    <p className='mb-0'>From all orders over $5</p>
+                    <p className='mb-0'>From all orders over $4</p>
                   </div>
                 </div>
                 <div className='d-flex align-items-center gap-15'>
