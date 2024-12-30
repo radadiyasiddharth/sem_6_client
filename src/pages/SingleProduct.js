@@ -6,16 +6,17 @@ import watch from "../assets/images/watch.jpg"
 import watch_01 from "../assets/images/watch_01.avif"
 import ReactStars from 'react-rating-stars-component';
 import ReactImageZoom from 'react-image-zoom';
+import Color from "../components/Color"
 
 
 const SingleProduct = () => {
     const props = {
-        width: 400,       
-        height: 500,     
-        zoomWidth: 500,   
+        width: 400,
+        height: 500,
+        zoomWidth: 500,
         img: "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?cs=srgb&dl=pexels-ferarcosn-190819.jpg&fm=jpg",
     };
-    
+
     const [orderedProduct, setorderedProduct] = useState(false)
     return (
         <>
@@ -26,16 +27,67 @@ const SingleProduct = () => {
                     <div className="row">
                         <div className="col-6">
                             <div className="main-product-image">
-                                <div><ReactImageZoom {...props}/></div>
+                                <div><ReactImageZoom {...props} /></div>
                             </div>
-                        <div className="other-product-images d-flex flex-wrap gap-15">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
+                            <div className="other-product-images d-flex flex-wrap gap-15">
+                                <div><img src={watch} alt="watch" className='img-fluid' /></div>
+                                <div><img src={watch} alt="watch" className='img-fluid' /></div>
+                                <div><img src={watch} alt="watch" className='img-fluid' /></div>
+                                <div><img src={watch} alt="watch" className='img-fluid' /></div>
+                            </div>
                         </div>
                         <div className="col-6">
+                            <div className="main-product-details">
+                                <div className='border-bottom'>
+                                    <h3 className='title'>Kids Headphones  Bulk 10 Pack Multi Colored For Students</h3>
+                                </div>
+                                <div className='border-bottom py-3'>
+                                    <p className='price'>$ 100</p>
+                                    <div className='d-flex align-items-center gap-10'>
+                                        <ReactStars
+                                            count={5}
+                                            value={"3"}
+                                            edit={false}
+                                            size={24}
+                                            activeColor={"#ffd700"}
+                                        />
+                                        <p className='mb-0 t-review'>(2 Reviews)</p>
+                                    </div>
+                                    <a className='review-btn' href="#review">Write a Review</a>
+                                </div>
+                                <div className="border-bottom py-3">
+                                    <div className="d-flex align-items-center gap-10 my-2">
+                                        <h3 className='product-heading'>Type :</h3><p className='product-data'>Watch</p>
+                                    </div>
+                                    <div className="d-flex align-items-center gap-10 my-2">
+                                        <h3 className='product-heading'>Brand :</h3><p className='product-data'>Havels</p>
+                                    </div>
+                                    <div className="d-flex align-items-center gap-10 my-2">
+                                        <h3 className='product-heading'>Category :</h3><p className='product-data'>Watch</p>
+                                    </div>
+                                    <div className="d-flex align-items-center gap-10 my-2">
+                                        <h3 className='product-heading'>Tages :</h3><p className='product-data'>GFD</p>
+                                    </div>
+                                    <div className="d-flex align-items-center gap-10 my-2">
+                                        <h3 className='product-heading'>Availablity :</h3><p className='product-data'>In Stock</p>
+                                    </div>
+                                    <div className="d-flex flex-column gap-10 my-2">
+                                        <h3 className='product-heading'>Size :</h3>
+                                        <div className='d-flex flex-wrap gap-15'>
+                                                <span className="badge bolder-1 bg-white text-dark border-secondary">S</span>
+                                                <span className="badge bolder-1 bg-white text-dark border-secondary">M</span>
+                                                <span className="badge bolder-1 bg-white text-dark border-secondary">XL</span>
+                                                <span className="badge bolder-1 bg-white text-dark border-secondary">XXL</span>
+                                        </div>
+                                    </div>
+                                    <div className="d-flex flex-column gap-10 my-2">
+                                        <h3 className='product-heading'>Color :</h3><Color/>
+                                    </div>
+                                    <div className="d-flex flex-column gap-10 my-2">
+                                        <h3 className='product-heading'>Quantity :</h3><p className='product-data'>In Stock</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -44,7 +96,7 @@ const SingleProduct = () => {
                 <div className="container-xxl">
                     <div className="row">
                         <div className="col-12">
-                                <h4>Description</h4>
+                            <h4>Description</h4>
                             <div className="bg-white p-3">
                                 <p className="">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae facere perferendis minus quae, cum corporis!</p>
                             </div>
@@ -56,7 +108,7 @@ const SingleProduct = () => {
                 <div className="container-xxl">
                     <div className="row">
                         <div className="col-12">
-                        <h3>Reviews</h3>
+                            <h3 id='review'>Reviews</h3>
                             <div className="review-inner-wrapper">
                                 <div className="review-head d-flex justify-content-between align-items-end">
                                     <div>
@@ -102,16 +154,16 @@ const SingleProduct = () => {
                                 </div>
                                 <div className="reviews mt-4">
                                     <div className="review">
-                                       <div className="d-flex align-items-center gap-10">
-                                        <h6 className='mb-0'>Navdeep</h6>
-                                       <ReactStars
-                                            count={5}
-                                            value={"3"}
-                                            edit={false}
-                                            size={24}
-                                            activeColor={"#ffd700"}
-                                        />
-                                       </div>
+                                        <div className="d-flex align-items-center gap-10">
+                                            <h6 className='mb-0'>Navdeep</h6>
+                                            <ReactStars
+                                                count={5}
+                                                value={"3"}
+                                                edit={false}
+                                                size={24}
+                                                activeColor={"#ffd700"}
+                                            />
+                                        </div>
                                         <p className='mt-3'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus sapiente aliquam omnis saepe maiores perferendis hic accusamus expedita commodi! Aspernatur iusto dolor optio accusamus praesentium cum. Corporis tenetur recusandae sint.</p>
                                     </div>
                                 </div>
