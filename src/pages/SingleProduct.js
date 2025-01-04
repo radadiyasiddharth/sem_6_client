@@ -9,11 +9,12 @@ import ReactImageZoom from 'react-image-zoom';
 import Color from "../components/Color"
 
 
+
 const SingleProduct = () => {
     const props = {
         width: 400,
-        height: 500,
-        zoomWidth: 500,
+        height: 600,
+        zoomWidth: 600,
         img: "https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg?cs=srgb&dl=pexels-ferarcosn-190819.jpg&fm=jpg",
     };
 
@@ -26,8 +27,8 @@ const SingleProduct = () => {
                 <div className="container-xxl">
                     <div className="row">
                         <div className="col-6">
-                            <div className="main-product-image">
-                                <div><ReactImageZoom {...props} /></div>
+                            <div className="main-product-image ">
+                                <div><ReactImageZoom  {...props} /></div>
                             </div>
                             <div className="other-product-images d-flex flex-wrap gap-15">
                                 <div><img src={watch} alt="watch" className='img-fluid' /></div>
@@ -71,20 +72,27 @@ const SingleProduct = () => {
                                     <div className="d-flex align-items-center gap-10 my-2">
                                         <h3 className='product-heading'>Availablity :</h3><p className='product-data'>In Stock</p>
                                     </div>
-                                    <div className="d-flex flex-column gap-10 my-2">
+                                    <div className="d-flex flex-column gap-10 mt-2 mb-3">
                                         <h3 className='product-heading'>Size :</h3>
                                         <div className='d-flex flex-wrap gap-15'>
-                                                <span className="badge bolder-1 bg-white text-dark border-secondary">S</span>
-                                                <span className="badge bolder-1 bg-white text-dark border-secondary">M</span>
-                                                <span className="badge bolder-1 bg-white text-dark border-secondary">XL</span>
-                                                <span className="badge bolder-1 bg-white text-dark border-secondary">XXL</span>
+                                                <span className="badge bolder-1 bg-white text-dark border-secondary border ">S</span>
+                                                <span className="badge bolder-1 bg-white text-dark border-secondary border ">M</span>
+                                                <span className="badge bolder-1 bg-white text-dark border-secondary border ">XL</span>
+                                                <span className="badge bolder-1 bg-white text-dark border-secondary border ">XXL</span>
                                         </div>
                                     </div>
-                                    <div className="d-flex flex-column gap-10 my-2">
+                                    <div className="d-flex flex-column gap-10 mt-2 mb-3">
                                         <h3 className='product-heading'>Color :</h3><Color/>
                                     </div>
-                                    <div className="d-flex flex-column gap-10 my-2">
-                                        <h3 className='product-heading'>Quantity :</h3><p className='product-data'>In Stock</p>
+                                    <div className="d-flex flex-row align-items-center gap-15 mt-2 mb-3">
+                                        <h3 className='product-heading'>Quantity :</h3>
+                                        <div>
+                                            <input type="number" name="" min={1} style={{width:"70px"}} className='form-control' max={10} id="" />
+                                        </div>
+                                        <div className='d-flex align-items-center gap-30 ms-5'>
+                                        <button className='button border-0'>Add To Cart</button>
+                                        <button to={"/signup"} className='button signup'>Buy It Now</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
